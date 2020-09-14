@@ -14,10 +14,8 @@ services:
 
   app:
     restart: always
-    build: ./app
-    working_dir: /app
+    image: manojsaws/spring-eureka:latest
     volumes:
-      - ./app:/app
+      - ./target:/app
     expose:
       - "8080"
-    command: mvn clean spring-boot:run
